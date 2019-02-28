@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PhotoSlideshow",
+            "request": "launch",
+            "mainClass": "coffee.hashcode.PhotoSlideshow",
+            "projectName": "Coffee-HashCode-2019_fe79673f"
+        }
+    ]
+}

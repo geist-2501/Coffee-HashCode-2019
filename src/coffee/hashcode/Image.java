@@ -58,4 +58,12 @@ public class Image {
         return tags;
     }
 
+    @Override
+    public String toString() {
+        return "Image{" +
+            "id=" + id +
+            ", orientation=" + orientation +
+            ", tagNumber=" + tagNumber +
+            '}';
+    }
 }

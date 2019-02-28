@@ -26,7 +26,7 @@ public final class ImageParser {
 
         String[] lines = inputFile.split("\n");
         long amount = Long.parseLong(lines[0].trim());
-        for (int i = 1; i <= 1 + amount; i++) {
+        for (int i = 1; i < 1 + amount; i++) {
             String[] elements = lines[i].split(" ");
             Image image = new Image(i - 1, Orientation.parseOrientation(elements[0]), Integer.parseInt(elements[1]), loadTags(Arrays.copyOfRange(elements, 2, elements.length)));
             insertAtAllTagLocations(output, image);

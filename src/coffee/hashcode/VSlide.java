@@ -58,4 +58,12 @@ public class VSlide extends Slide
     {
         return tags.size();
     }
+
+    public Image getLeft() {
+        return left;
+    }
+
+    public Image getRight() {
+        return right;
+    }
 }

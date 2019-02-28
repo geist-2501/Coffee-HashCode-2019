@@ -11,6 +11,10 @@ public class HSlide extends Slide
         this.image = image;
     }
 
+    public Image getImage() {
+        return image;
+    }
+
 
     /**
      * Gets the tags of images in the slide.

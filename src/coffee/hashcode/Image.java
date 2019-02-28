@@ -12,7 +12,7 @@ public class Image {
     }
 
     /**
-     * The ID of the image in the input file (line number - 1)
+     * The ID of the image in the input file (line number - 2)
      */
     private int id;
     /**

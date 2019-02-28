@@ -8,7 +8,14 @@ import java.util.Set;
 public class Image {
 
     public enum Orientation{
-        HORIZONTAL, VERTICAL
+        HORIZONTAL, VERTICAL;
+
+        public static Orientation parseOrientation(String input){
+            if (input.equalsIgnoreCase("V")) return VERTICAL;
+
+            // TODO(Ryan): dangerous?
+            else return HORIZONTAL;
+        }
     }
 
     /**

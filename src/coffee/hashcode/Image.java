@@ -8,11 +8,18 @@ import java.util.Set;
 public class Image {
 
     public enum Orientation{
-        HORIZONTAL, VERTICAL
+        HORIZONTAL, VERTICAL;
+
+        public static Orientation parseOrientation(String input){
+            if (input.equalsIgnoreCase("V")) return VERTICAL;
+
+            // TODO(Ryan): dangerous?
+            else return HORIZONTAL;
+        }
     }
 
     /**
-     * The ID of the image in the input file (line number - 1)
+     * The ID of the image in the input file (line number - 2)
      */
     private int id;
     /**

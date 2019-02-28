@@ -9,13 +9,14 @@ import java.util.List;
 public class PhotoSlideshow {
 
     public static void main(String[] args) throws IOException {
-        File inputFile = new File("datasets/c_memorable_moments.txt");
+        String input = args[0];
+        File inputFile = new File("datasets/" + input + ".txt");
         String fileData = FileUtilities.readFileFully(inputFile);
         HashMap<String, List<Image>> categorisedImages = ImageParser.parseInputFile(fileData);
         SlideCreator creator = new SlideCreator(categorisedImages);
         List<Slide> slideShow = creator.getSlideShow();
 
-        OutputWriter outputWriter = new OutputWriter();
+        OutputWriter outputWriter = new OutputWriter(input + ".output.txt");
         outputWriter.print(slideShow);
     }
 

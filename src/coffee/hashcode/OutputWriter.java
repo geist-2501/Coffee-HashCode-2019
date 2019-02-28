@@ -6,9 +6,15 @@ import java.util.List;
 
 public class OutputWriter {
 
+    private String outputFile;
+
+    public OutputWriter(String outputFile) {
+        this.outputFile = outputFile;
+    }
+
     public void print(List<Slide> slides) throws IOException {
 
-        PrintWriter output = new PrintWriter("output.txt");
+        PrintWriter output = new PrintWriter(outputFile);
         output.println(slides.size());
 
         for (Slide current : slides){
@@ -17,6 +23,7 @@ public class OutputWriter {
             }
             else if (current instanceof VSlide){
                 output.print(((VSlide) current).getLeft().getId());
+                output.print(" ");
                 output.print(((VSlide) current).getRight().getId());
                 output.println();
             }

@@ -66,4 +66,28 @@ public class VSlide extends Slide
     public Image getRight() {
         return right;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        VSlide vSlide = (VSlide) o;
+
+        if (left != null ? !left.equals(vSlide.left) : vSlide.left != null)
+            return false;
+        if (right != null ? !right.equals(vSlide.right) : vSlide.right != null)
+            return false;
+        return tags != null ? tags.equals(vSlide.tags) : vSlide.tags == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = left != null ? left.hashCode() : 0;
+        result = 31 * result + (right != null ? right.hashCode() : 0);
+        result = 31 * result + (tags != null ? tags.hashCode() : 0);
+        return result;
+    }
 }

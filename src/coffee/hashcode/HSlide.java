@@ -34,6 +34,23 @@ public class HSlide extends Slide
      */
     public int getTagsNumber()
     {
-        return image.getTagNumber();
+        return image.getTagsNumber();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        HSlide hSlide = (HSlide) o;
+
+        return image != null ? image.equals(hSlide.image) : hSlide.image == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return image != null ? image.hashCode() : 0;
     }
 }

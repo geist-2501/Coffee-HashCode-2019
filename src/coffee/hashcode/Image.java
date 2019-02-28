@@ -5,7 +5,7 @@ import java.util.Set;
 /**
  * Represents one data record in the input file which itself represents an image
  */
-public class Image {
+public class Image implements Taggable {
 
     public enum Orientation{
         HORIZONTAL, VERTICAL;
@@ -50,7 +50,7 @@ public class Image {
         return orientation;
     }
 
-    public int getTagNumber() {
+    public int getTagsNumber() {
         return tagNumber;
     }
 

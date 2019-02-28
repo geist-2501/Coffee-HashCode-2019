@@ -2,10 +2,8 @@ package coffee.hashcode;
 
 import java.util.Set;
 
-public abstract class Slide
+public abstract class Slide implements Taggable
 {
-    public abstract Set<String> getTags();
-    public abstract int getTagsNumber(); 
 
 
 }

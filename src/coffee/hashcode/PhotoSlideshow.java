@@ -9,7 +9,7 @@ import java.util.List;
 public class PhotoSlideshow {
 
     public static void main(String[] args) throws IOException {
-        File inputFile = new File("datasets/a_example.txt");
+        File inputFile = new File("datasets/c_memorable_moments.txt");
         String fileData = FileUtilities.readFileFully(inputFile);
         HashMap<String, List<Image>> categorisedImages = ImageParser.parseInputFile(fileData);
         SlideCreator creator = new SlideCreator(categorisedImages);

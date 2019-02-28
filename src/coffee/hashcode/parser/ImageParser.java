@@ -2,6 +2,7 @@ package coffee.hashcode.parser;
 
 import coffee.hashcode.Image;
 import coffee.hashcode.Image.Orientation;
+import coffee.hashcode.Taggable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -42,12 +43,12 @@ public final class ImageParser {
      * @param output the hashmap to insert the image into
      * @param image  the image to insert into the hashmap
      */
-    private static void insertAtAllTagLocations(HashMap<String, List<Image>> output, Image image) {
+    public static <T extends Taggable> void insertAtAllTagLocations(HashMap<String, List<T>> output, T image) {
         for (String tag : image.getTags()) {
             if (output.containsKey(tag)) {
                 output.get(tag).add(image);
             } else {
-                List<Image> collection = new ArrayList<>();
+                List<T> collection = new ArrayList<>();
                 collection.add(image);
                 output.put(tag, collection);
             }

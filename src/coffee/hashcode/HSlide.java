@@ -34,6 +34,6 @@ public class HSlide extends Slide
      */
     public int getTagsNumber()
     {
-        return image.getTagNumber();
+        return image.getTagsNumber();
     }
 }

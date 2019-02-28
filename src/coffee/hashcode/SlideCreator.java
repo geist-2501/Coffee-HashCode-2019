@@ -20,10 +20,18 @@ public class SlideCreator
         slideShow = new ArrayList<Slide>();
     }
 
+    private HashMap<String, List<Slide>> preprocessVerticals(){
+        HashMap<String, List<Slide>> output = new HashMap<>();
+
+        // TODO: replace this with some magic
+
+        return output;
+    }
+
     /**
      * Creates a slideshow.
      */
-    private void CreateSlideShow()
+    private void CreateSlideShow(HashMap<String, List<Slide>> slides){}
     {
         //TODO: (Blair) like, the actual meat of the project goes here.
 
@@ -33,7 +41,7 @@ public class SlideCreator
 
     public List<Slide> getSlideShow()
     {
-        CreateSlideShow();
+        CreateSlideShow(preprocessVerticals());
         return slideShow;
     }
 }
